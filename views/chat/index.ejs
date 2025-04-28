@@ -1,0 +1,46 @@
+<div class="chat-container">
+  <div class="chat-sidebar">
+    <h3><i class="fas fa-users"></i> Online Users</h3>
+    <ul id="users">
+      <% onlineUsers.forEach(user => { %>
+      <li><%= user.username %></li>
+      <% }) %>
+    </ul>
+  </div>
+  <div class="chat-main">
+    <div class="chat-messages" id="chat-messages">
+      <% messages.forEach(message => { %>
+      <div
+        class="message <%= message.user.toString() === user._id.toString() ? 'own-message' : '' %>"
+      >
+        <p class="meta">
+          <%= message.username %>
+          <span><%= new Date(message.time).toLocaleTimeString() %></span>
+        </p>
+        <p class="text"><%= message.text %></p>
+      </div>
+      <% }) %>
+    </div>
+    <div class="chat-form-container">
+      <form id="chat-form">
+        <input
+          id="msg"
+          type="text"
+          placeholder="Enter Message"
+          required
+          autocomplete="off"
+        />
+        <button class="btn-primary">
+          <i class="fas fa-paper-plane"></i> Send
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+<script>
+  const userId = "<%= user._id %>";
+  const username = "<%= user.username %>";
+</script>
+<script src="/js/chat.js"></script>

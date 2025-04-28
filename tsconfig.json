@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    // Target and module settings
+    "target": "ES2022", // Modern JavaScript features
+    "module": "NodeNext", // Use Node.js module resolution
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true, // Better interop between CommonJS and ES modules
+    "resolveJsonModule": true, // Allow importing JSON files
+
+    // Type checking
+    "strict": true, // Enable all strict type checking options
+    "noImplicitAny": true, // Error on expressions with implied 'any' type
+    "strictNullChecks": true, // More rigorous null/undefined checking
+    "noUncheckedIndexedAccess": true, // Add 'undefined' to indexed access
+    "noImplicitReturns": true, // Error on code paths that don't return in functions
+
+    // Code generation
+    "sourceMap": true, // Generate source maps for debugging
+    "declaration": true, // Generate .d.ts files
+    "outDir": "./dist", // Output directory
+    "rootDir": "./src", // Source directory
+
+    // JavaScript support
+    "allowJs": true, // Allow JavaScript files
+    "checkJs": true, // Type check JavaScript files
+
+    // Advanced
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Ensure case sensitivity
+    "isolatedModules": true, // Ensure each file can be safely transpiled
+    "incremental": true, // Enable incremental compilation
+
+    // JSX support (uncomment if needed)
+    // "jsx": "react-jsx",       // Support JSX for React
+
+    // Paths and baseUrl (customize as needed)
+    "baseUrl": ".", // Base directory for resolving non-relative module names
+    "paths": {
+      "@/*": ["src/*"] // Path aliases for cleaner imports
+    }
+  },
+  "include": ["src/**/*"], // Files to include
+  "exclude": ["node_modules", "dist"] // Files to exclude
+}

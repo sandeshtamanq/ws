@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "ESNext",
+    "outDir": "./public/js",
+    "rootDir": "./src/client",
+    "strict": true,
+    "esModuleInterop": true,
+    "lib": ["DOM", "ES2018"],
+    "sourceMap": true
+  },
+  "include": ["src/client/**/*"],
+  "exclude": ["node_modules", "src/server"]
+}

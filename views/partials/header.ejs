@@ -1,0 +1,9 @@
+<header class="header">
+  <h1><i class="fas fa-comments"></i> Chat App</h1>
+  <% if (typeof user !== 'undefined') { %>
+  <div class="user-nav">
+    <span>Hello, <%= user.username %></span>
+    <a href="/logout" class="btn-secondary">Logout</a>
+  </div>
+  <% } %>
+</header>
