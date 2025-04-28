@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build:server && npm run build:client",
     "build:client": "webpack --config webpack.config.js",
     "build:server": "tsc",
-    "build": "npm run build:server && npm run build:client",
-    "dev:client": "webpack --config webpack.config.js --watch",
-    "dev:server": "tsc --watch",
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "start": "node dist/app.js"
+    "start": "node dist/app.js",
+    "vercel-build": "npm run build"
   },
   "keywords": [],
   "author": "",
